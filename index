@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>أمل مفرح الثبيتي - السيرة الذاتية</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.5;
+            color: #333;
+            background: white;
+            font-size: 14px;
+        }
+
+        .container {
+            max-width: 210mm;
+            margin: 0 auto;
+            background: white;
+            display: grid;
+            grid-template-columns: 70mm 1fr;
+            min-height: 297mm;
+        }
+
+        .sidebar {
+            background: #2c3e50;
+            color: white;
+            padding: 20px;
+        }
+
+        .main-content {
+            padding: 20px 25px;
+            background: white;
+        }
+
+        .profile-section {
+            text-align: center;
+            margin-bottom: 25px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid rgba(255,255,255,0.2);
+        }
+
+        .profile-img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: #34495e;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 15px;
+            font-size: 35px;
+            color: white;
+        }
+
+        .profile-name {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: white;
+        }
+
+        .profile-title {
+            font-size: 12px;
+            color: #bdc3c7;
+            margin-bottom: 15px;
+        }
+
+        .section-title {
+            font-size: 16px;
+            font-weight: bold;
+            margin-bottom: 15px;
+            color: white;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            position: relative;
+            padding-bottom: 8px;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 100%;
+            height: 2px;
+            background: #3498db;
+        }
+
+        .contact-info {
+            margin-bottom: 25px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 12px;
+            font-size: 11px;
+        }
+
+        .contact-item i {
+            width: 15px;
+            margin-left: 10px;
+            color: #3498db;
+            font-size: 12px;
+        }
+
+        .skills-section {
+            margin-bottom: 25px;
+        }
+
+        .skill-item {
+            margin-bottom: 12px;
+        }
+
+        .skill-name {
+            font-size: 11px;
+            margin-bottom: 3px;
+            font-weight: 500;
+        }
+
+        .skill-bar {
+            height: 4px;
+            background: rgba(255,255,255,0.2);
+            border-radius: 2px;
+            overflow: hidden;
+        }
+
+        .skill-progress {
+            height: 100%;
+            background: #3498db;
+            border-radius: 2px;
+        }
+
+        .languages {
+            margin-bottom: 25px;
+        }
+
+        .language-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 8px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            font-size: 11px;
+        }
+
+        .language-item:last-child {
+            border-bottom: none;
+        }
+
+        .language-level {
+            background: #3498db;
+            color: white;
+            padding: 3px 8px;
+            border-radius: 10px;
+            font-size: 9px;
+        }
+
+        .main-section {
+            margin-bottom: 25px;
+        }
+
+        .main-title {
+            font-size: 18px;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 15px;
+            position: relative;
+            padding-bottom: 8px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .main-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 60px;
+            height: 2px;
+            background: #3498db;
+        }
+
+        .objective {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 5px;
+            border-right: 3px solid #3498db;
+            font-size: 12px;
+            line-height: 1.6;
+            text-align: justify;
+        }
+
+        .experience-item, .education-item {
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #ecf0f1;
+        }
+
+        .experience-item:last-child, .education-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+        }
+
+        .job-title {
+            font-size: 14px;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 3px;
+        }
+
+        .company {
+            font-size: 12px;
+            color: #3498db;
+            font-weight: 500;
+            margin-bottom: 3px;
+        }
+
+        .duration {
+            font-size: 10px;
+            color: #7f8c8d;
+            margin-bottom: 8px;
+        }
+
+        .job-description {
+            list-style: none;
+            font-size: 11px;
+        }
+
+        .job-description li {
+            margin-bottom: 3px;
+            padding-right: 15px;
+            position: relative;
+            line-height: 1.4;
+        }
+
+        .job-description li::before {
+            content: '•';
+            color: #3498db;
+            font-weight: bold;
+            position: absolute;
+            right: 0;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+
+        .skill-category {
+            background: #f8f9fa;
+            padding: 12px;
+            border-radius: 5px;
+            border-right: 3px solid #3498db;
+        }
+
+        .skill-category h4 {
+            color: #2c3e50;
+            margin-bottom: 8px;
+            font-size: 12px;
+        }
+
+        .skill-category ul {
+            list-style: none;
+        }
+
+        .skill-category li {
+            margin-bottom: 3px;
+            position: relative;
+            padding-right: 12px;
+            font-size: 10px;
+            line-height: 1.3;
+        }
+
+        .skill-category li::before {
+            content: '✓';
+            color: #3498db;
+            font-weight: bold;
+            position: absolute;
+            right: 0;
+            font-size: 9px;
+        }
+
+        .interests {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+        }
+
+        .interest-tag {
+            background: #3498db;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 12px;
+            font-size: 9px;
+        }
+
+        .print-info {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            background: #3498db;
+            color: white;
+            padding: 15px 20px;
+            border-radius: 5px;
+            font-size: 14px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            z-index: 1000;
+        }
+
+        .print-info h3 {
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
+
+        .print-info p {
+            margin-bottom: 8px;
+            font-size: 12px;
+        }
+
+        .print-info button {
+            background: white;
+            color: #3498db;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 3px;
+            cursor: pointer;
+            font-weight: bold;
+            margin-top: 10px;
+            width: 100%;
+        }
+
+        .print-info button:hover {
+            background: #f8f9fa;
+        }
+
+        @media print {
+            body {
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+            
+            .print-info {
+                display: none;
+            }
+            
+            .container {
+                max-width: none;
+                width: 100%;
+                height: 100vh;
+                page-break-inside: avoid;
+            }
+            
+            .main-section {
+                page-break-inside: avoid;
+            }
+            
+            .experience-item, .education-item {
+                page-break-inside: avoid;
+            }
+        }
+
+        @page {
+            size: A4;
+            margin: 0;
+        }
+
+        /* إخفاء شريط التمرير */
+        ::-webkit-scrollbar {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="print-info">
+        <h3><i class="fas fa-file-pdf"></i> تحويل إلى PDF</h3>
+        <p><strong>للحصول على ملف PDF:</strong></p>
+        <p>1. اضغط على زر "طباعة" أدناه</p>
+        <p>2. اختر "Save as PDF" أو "حفظ كـ PDF"</p>
+        <p>3. اختر إعداد الطباعة "A4"</p>
+        <p>4. تأكد من تفعيل "طباعة الألوان"</p>
+        <button onclick="window.print()">
+            <i class="fas fa-print"></i> طباعة / تحويل لـ PDF
+        </button>
+    </div>
+
+    <div class="container">
+        <!-- الشريط الجانبي -->
+        <div class="sidebar">
+            <div class="profile-section">
+                <div class="profile-img">
+                    <i class="fas fa-user"></i>
+                </div>
+                <h1 class="profile-name">أمل مفرح الثبيتي</h1>
+                <p class="profile-title">أخصائية إدارة ومدربة حاسب آلي</p>
+            </div>
+
+            <div class="contact-info">
+                <h3 class="section-title">معلومات التواصل</h3>
+                
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <span>0501010370</span>
+                </div>
+                
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <span>B_ANTKSA@HOTMAIL.COM</span>
+                </div>
+                
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>الطائف، المملكة العربية السعودية</span>
+                </div>
+                
+                <div class="contact-item">
+                    <i class="fas fa-calendar"></i>
+                    <span>9/8/1401 هـ</span>
+                </div>
+                
+                <div class="contact-item">
+                    <i class="fas fa-flag"></i>
+                    <span>الجنسية: سعودية</span>
+                </div>
+
+                <div class="contact-item">
+                    <i class="fas fa-heart"></i>
+                    <span>الحالة: متزوجة</span>
+                </div>
+            </div>
+
+            <div class="skills-section">
+                <h3 class="section-title">المهارات التقنية</h3>
+                
+                <div class="skill-item">
+                    <div class="skill-name">Microsoft Office</div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 95%"></div>
+                    </div>
+                </div>
+                
+                <div class="skill-item">
+                    <div class="skill-name">قواعد البيانات</div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 85%"></div>
+                    </div>
+                </div>
+                
+                <div class="skill-item">
+                    <div class="skill-name">أنظمة التشغيل</div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 90%"></div>
+                    </div>
+                </div>
+                
+                <div class="skill-item">
+                    <div class="skill-name">التدريب</div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 88%"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="languages">
+                <h3 class="section-title">اللغات</h3>
+                
+                <div class="language-item">
+                    <span>العربية</span>
+                    <span class="language-level">الأم</span>
+                </div>
+                
+                <div class="language-item">
+                    <span>الإنجليزية</span>
+                    <span class="language-level">جيد</span>
+                </div>
+            </div>
+
+            <div class="languages">
+                <h3 class="section-title">الاهتمامات</h3>
+                <div class="interests">
+                    <span class="interest-tag">تطوير الأنظمة</span>
+                    <span class="interest-tag">التدريب</span>
+                    <span class="interest-tag">التقنية</span>
+                    <span class="interest-tag">القيادة</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- المحتوى الرئيسي -->
+        <div class="main-content">
+            <div class="main-section">
+                <h2 class="main-title">الهدف المهني</h2>
+                <div class="objective">
+                    أسعى للحصول على فرصة وظيفية متميزة في مجال الإدارة أو التدريب، حيث يمكنني الاستفادة من خبرتي الإدارية وخلفيتي الأكاديمية في إدارة الأعمال وعلوم الحاسب الآلي للمساهمة في تطوير العمليات الإدارية وبناء فرق عمل فعالة، مع التطوير المستمر لمهاراتي المهنية.
+                </div>
+            </div>
+
+            <div class="main-section">
+                <h2 class="main-title">الخبرات العملية</h2>
+                
+                <div class="experience-item">
+                    <h3 class="job-title">مراقبة</h3>
+                    <p class="company">وزارة الشؤون الإسلامية والدعوة والإرشاد</p>
+                    <p class="duration">1441 هـ (2020م) - حتى الآن</p>
+                    <ul class="job-description">
+                        <li>إدارة وتنسيق أعمال القسم النسائي بكفاءة عالية</li>
+                        <li>إعداد ومراجعة المراسلات الرسمية والخطابات الإدارية</li>
+                        <li>الإشراف المباشر على ميقات السيل الكبير</li>
+                        <li>تطوير الإجراءات الإدارية لتحسين الأداء</li>
+                        <li>التنسيق مع الجهات المختلفة لتنفيذ المشاريع</li>
+                    </ul>
+                </div>
+                
+                <div class="experience-item">
+                    <h3 class="job-title">مدربة حاسب آلي</h3>
+                    <p class="company">مركز تدريب متخصص</p>
+                    <p class="duration">عدة سنوات خبرة</p>
+                    <ul class="job-description">
+                        <li>تصميم وتنفيذ برامج تدريبية في مهارات الحاسب</li>
+                        <li>تدريس برامج Microsoft Office المتنوعة</li>
+                        <li>تطوير مهارات الطباعة والتقنيات الحديثة</li>
+                        <li>تقييم ومتابعة تقدم المتدربات</li>
+                        <li>إعداد المواد التدريبية والمناهج</li>
+                    </ul>
+                </div>
+                
+                <div class="experience-item">
+                    <h3 class="job-title">سكرتيرة تنفيذية</h3>
+                    <p class="company">معهد تحفيظ القرآن الكريم</p>
+                    <p class="duration">عدة سنوات</p>
+                    <ul class="job-description">
+                        <li>تنظيم وإدارة نظام الأرشفة الإلكتروني</li>
+                        <li>إعداد الجداول الزمنية والتقاويم</li>
+                        <li>تنسيق المراسلات بين الإدارات والمعلمات</li>
+                        <li>إدارة المواعيد والاجتماعات الإدارية</li>
+                        <li>إعداد التقارير الدورية والإحصائيات</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="main-section">
+                <h2 class="main-title">المؤهلات العلمية</h2>
+                
+                <div class="education-item">
+                    <h3 class="job-title">بكالوريوس إدارة أعمال</h3>
+                    <p class="company">جامعة تبوك - تبوك</p>
+                    <p class="duration">سنة التخرج: 2016م</p>
+                </div>
+                
+                <div class="education-item">
+                    <h3 class="job-title">دبلوم علوم الحاسب الآلي</h3>
+                    <p class="company">معهد العالمية للحاسب الآلي - الرياض</p>
+                </div>
+                
+                <div class="education-item">
+                    <h3 class="job-title">دبلوم التربية العام</h3>
+                    <p class="company">جامعة تبوك - تبوك</p>
+                </div>
+            </div>
+
+            <div class="main-section">
+                <h2 class="main-title">المهارات المتخصصة</h2>
+                
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h4>المهارات الإدارية</h4>
+                        <ul>
+                            <li>القيادة الإدارية وإدارة الفرق</li>
+                            <li>التخطيط الاستراتيجي</li>
+                            <li>إعداد التقارير والمراسلات</li>
+                            <li>إدارة الوقت وتحديد الأولويات</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="skill-category">
+                        <h4>المهارات الشخصية</h4>
+                        <ul>
+                            <li>التواصل الفعال والعرض</li>
+                            <li>العمل تحت الضغط</li>
+                            <li>حل المشكلات والتفكير النقدي</li>
+                            <li>التكيف مع بيئات العمل المتغيرة</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
