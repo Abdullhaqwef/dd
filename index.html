@@ -13,56 +13,652 @@
         }
 
         body {
-            font-family: 'Arial', sans-serif;
-            line-height: 1.5;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
             color: #333;
-            background: white;
-            font-size: 14px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
         }
 
         .container {
-            max-width: 210mm;
+            max-width: 1200px;
             margin: 0 auto;
-            background: white;
+            padding: 20px;
             display: grid;
-            grid-template-columns: 70mm 1fr;
-            min-height: 297mm;
+            grid-template-columns: 350px 1fr;
+            gap: 30px;
+            min-height: 100vh;
         }
 
         .sidebar {
-            background: #2c3e50;
-            color: white;
-            padding: 20px;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+            height: fit-content;
+            position: sticky;
+            top: 20px;
         }
 
         .main-content {
-            padding: 20px 25px;
-            background: white;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
         }
 
         .profile-section {
             text-align: center;
-            margin-bottom: 25px;
-            padding-bottom: 20px;
-            border-bottom: 2px solid rgba(255,255,255,0.2);
+            margin-bottom: 30px;
         }
 
         .profile-img {
-            width: 80px;
-            height: 80px;
+            width: 150px;
+            height: 150px;
             border-radius: 50%;
-            background: #34495e;
+            background: linear-gradient(135deg, #667eea, #764ba2);
             display: flex;
             align-items: center;
             justify-content: center;
-            margin: 0 auto 15px;
-            font-size: 35px;
+            margin: 0 auto 20px;
+            font-size: 60px;
             color: white;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
         }
 
         .profile-name {
+            font-size: 28px;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 5px;
+        }
+
+        .profile-title {
+            font-size: 16px;
+            color: #7f8c8d;
+            margin-bottom: 20px;
+        }
+
+        .contact-info {
+            margin-bottom: 30px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+            padding: 10px;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+        }
+
+        .contact-item:hover {
+            background: rgba(102, 126, 234, 0.1);
+            transform: translateX(-5px);
+        }
+
+        .contact-item i {
+            width: 20px;
+            margin-left: 15px;
+            color: #667eea;
+        }
+
+        .skills-section {
+            margin-bottom: 30px;
+        }
+
+        .section-title {
             font-size: 20px;
             font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .section-title i {
+            color: #667eea;
+        }
+
+        .skill-item {
+            margin-bottom: 15px;
+        }
+
+        .skill-name {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 5px;
+            font-weight: 500;
+        }
+
+        .skill-bar {
+            height: 8px;
+            background: #ecf0f1;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .skill-progress {
+            height: 100%;
+            background: linear-gradient(90deg, #667eea, #764ba2);
+            border-radius: 10px;
+            animation: fillProgress 2s ease-in-out;
+        }
+
+        @keyframes fillProgress {
+            from { width: 0; }
+        }
+
+        .languages {
+            margin-bottom: 30px;
+        }
+
+        .language-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 0;
+            border-bottom: 1px solid #ecf0f1;
+        }
+
+        .language-item:last-child {
+            border-bottom: none;
+        }
+
+        .language-level {
+            background: linear-gradient(90deg, #667eea, #764ba2);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 12px;
+        }
+
+        .main-section {
+            margin-bottom: 40px;
+        }
+
+        .main-title {
+            font-size: 32px;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 30px;
+            position: relative;
+        }
+
+        .main-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            right: 0;
+            width: 100px;
+            height: 3px;
+            background: linear-gradient(90deg, #667eea, #764ba2);
+            border-radius: 2px;
+        }
+
+        .objective {
+            background: rgba(102, 126, 234, 0.1);
+            padding: 25px;
+            border-radius: 15px;
+            border-right: 5px solid #667eea;
+            font-size: 16px;
+            line-height: 1.8;
+        }
+
+        .experience-item, .education-item {
+            margin-bottom: 30px;
+            padding: 25px;
+            background: rgba(255, 255, 255, 0.7);
+            border-radius: 15px;
+            border: 1px solid rgba(102, 126, 234, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .experience-item:hover, .education-item:hover {
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            transform: translateY(-5px);
+        }
+
+        .job-title {
+            font-size: 20px;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 5px;
+        }
+
+        .company {
+            font-size: 16px;
+            color: #667eea;
+            font-weight: 500;
+            margin-bottom: 5px;
+        }
+
+        .duration {
+            font-size: 14px;
+            color: #7f8c8d;
+            margin-bottom: 15px;
+        }
+
+        .job-description {
+            list-style: none;
+        }
+
+        .job-description li {
+            margin-bottom: 8px;
+            padding-right: 20px;
+            position: relative;
+        }
+
+        .job-description li::before {
+            content: '▸';
+            color: #667eea;
+            font-weight: bold;
+            position: absolute;
+            right: 0;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .skill-category {
+            background: rgba(255, 255, 255, 0.7);
+            padding: 20px;
+            border-radius: 15px;
+            border: 1px solid rgba(102, 126, 234, 0.1);
+        }
+
+        .skill-category h4 {
+            color: #2c3e50;
+            margin-bottom: 15px;
+            font-size: 16px;
+        }
+
+        .skill-category ul {
+            list-style: none;
+        }
+
+        .skill-category li {
+            margin-bottom: 5px;
+            position: relative;
+            padding-right: 15px;
+        }
+
+        .skill-category li::before {
+            content: '✓';
+            color: #667eea;
+            font-weight: bold;
+            position: absolute;
+            right: 0;
+        }
+
+        .interests {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .interest-tag {
+            background: linear-gradient(90deg, #667eea, #764ba2);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 25px;
+            font-size: 14px;
+            transition: all 0.3s ease;
+        }
+
+        .interest-tag:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            .sidebar {
+                position: static;
+            }
+            
+            .main-content, .sidebar {
+                padding: 20px;
+            }
+            
+            .profile-name {
+                font-size: 24px;
+            }
+            
+            .main-title {
+                font-size: 28px;
+            }
+        }
+
+        .print-btn {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            background: linear-gradient(90deg, #667eea, #764ba2);
+            color: white;
+            border: none;
+            padding: 15px 20px;
+            border-radius: 50px;
+            cursor: pointer;
+            font-size: 16px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .print-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+        }
+
+        @media print {
+            body {
+                background: white;
+            }
+            
+            .print-btn {
+                display: none;
+            }
+            
+            .container {
+                box-shadow: none;
+                max-width: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            
+            .sidebar, .main-content {
+                background: white;
+                box-shadow: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <button class="print-btn" onclick="window.print()">
+        <i class="fas fa-print"></i> طباعة
+    </button>
+
+    <div class="container">
+        <!-- الشريط الجانبي -->
+        <div class="sidebar">
+            <div class="profile-section">
+                <div class="profile-img">
+                    <i class="fas fa-user"></i>
+                </div>
+                <h1 class="profile-name">أمل مفرح الثبيتي</h1>
+                <p class="profile-title">أخصائية إدارة ومدربة حاسب آلي</p>
+            </div>
+
+            <div class="contact-info">
+                <h3 class="section-title">
+                    <i class="fas fa-address-card"></i>
+                    معلومات التواصل
+                </h3>
+                
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <span>0501010370</span>
+                </div>
+                
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <span>B_ANTKSA@HOTMAIL.COM</span>
+                </div>
+                
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>الطائف، المملكة العربية السعودية</span>
+                </div>
+                
+                <div class="contact-item">
+                    <i class="fas fa-calendar"></i>
+                    <span>9/8/1401 هـ</span>
+                </div>
+                
+                <div class="contact-item">
+                    <i class="fas fa-flag"></i>
+                    <span>سعودية</span>
+                </div>
+            </div>
+
+            <div class="skills-section">
+                <h3 class="section-title">
+                    <i class="fas fa-chart-bar"></i>
+                    المهارات التقنية
+                </h3>
+                
+                <div class="skill-item">
+                    <div class="skill-name">
+                        <span>Microsoft Office</span>
+                        <span>95%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 95%"></div>
+                    </div>
+                </div>
+                
+                <div class="skill-item">
+                    <div class="skill-name">
+                        <span>إدارة قواعد البيانات</span>
+                        <span>85%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 85%"></div>
+                    </div>
+                </div>
+                
+                <div class="skill-item">
+                    <div class="skill-name">
+                        <span>أنظمة التشغيل</span>
+                        <span>90%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 90%"></div>
+                    </div>
+                </div>
+                
+                <div class="skill-item">
+                    <div class="skill-name">
+                        <span>التدريب والعرض</span>
+                        <span>88%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 88%"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="languages">
+                <h3 class="section-title">
+                    <i class="fas fa-language"></i>
+                    اللغات
+                </h3>
+                
+                <div class="language-item">
+                    <span>العربية</span>
+                    <span class="language-level">اللغة الأم</span>
+                </div>
+                
+                <div class="language-item">
+                    <span>الإنجليزية</span>
+                    <span class="language-level">جيد</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- المحتوى الرئيسي -->
+        <div class="main-content">
+            <div class="main-section">
+                <h2 class="main-title">الهدف المهني</h2>
+                <div class="objective">
+                    أسعى للحصول على فرصة وظيفية متميزة في مجال الإدارة أو التدريب، حيث يمكنني الاستفادة من خبرتي الإدارية وخلفيتي الأكاديمية في إدارة الأعمال وعلوم الحاسب الآلي للمساهمة في تطوير العمليات الإدارية وبناء فرق عمل فعالة، مع التطوير المستمر لمهاراتي المهنية.
+                </div>
+            </div>
+
+            <div class="main-section">
+                <h2 class="main-title">الخبرات العملية</h2>
+                
+                <div class="experience-item">
+                    <h3 class="job-title">مراقبة</h3>
+                    <p class="company">وزارة الشؤون الإسلامية والدعوة والإرشاد</p>
+                    <p class="duration">1441 هـ (2020م) - حتى الآن</p>
+                    <ul class="job-description">
+                        <li>إدارة وتنسيق أعمال القسم النسائي بكفاءة عالية</li>
+                        <li>إعداد ومراجعة المراسلات الرسمية والخطابات الإدارية</li>
+                        <li>الإشراف المباشر على ميقات السيل الكبير وضمان سير العمليات</li>
+                        <li>تطوير الإجراءات الإدارية لتحسين الأداء والإنتاجية</li>
+                        <li>التنسيق مع الجهات المختلفة لتنفيذ المشاريع والمبادرات</li>
+                    </ul>
+                </div>
+                
+                <div class="experience-item">
+                    <h3 class="job-title">مدربة حاسب آلي</h3>
+                    <p class="company">مركز تدريب متخصص</p>
+                    <p class="duration">سنوات خبرة متعددة</p>
+                    <ul class="job-description">
+                        <li>تصميم وتنفيذ برامج تدريبية متخصصة في مهارات الحاسب الآلي</li>
+                        <li>تدريس برامج Microsoft Office المتنوعة</li>
+                        <li>تطوير مهارات الطباعة والتعامل مع التقنيات الحديثة</li>
+                        <li>تقييم ومتابعة تقدم المتدربات وإعداد التقارير</li>
+                        <li>إعداد المواد التدريبية والمناهج التعليمية</li>
+                    </ul>
+                </div>
+                
+                <div class="experience-item">
+                    <h3 class="job-title">سكرتيرة تنفيذية</h3>
+                    <p class="company">معهد تحفيظ القرآن الكريم</p>
+                    <p class="duration">عدة سنوات</p>
+                    <ul class="job-description">
+                        <li>تنظيم وإدارة نظام الأرشفة الإلكتروني والورقي</li>
+                        <li>إعداد الجداول الزمنية والتقاويم الأكاديمية</li>
+                        <li>تنسيق المراسلات بين الإدارات والمعلمات</li>
+                        <li>إدارة المواعيد والاجتماعات الإدارية</li>
+                        <li>إعداد التقارير الدورية والإحصائيات</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="main-section">
+                <h2 class="main-title">المؤهلات العلمية</h2>
+                
+                <div class="education-item">
+                    <h3 class="job-title">بكالوريوس إدارة أعمال</h3>
+                    <p class="company">جامعة تبوك - تبوك</p>
+                    <p class="duration">سنة التخرج: 2016م</p>
+                </div>
+                
+                <div class="education-item">
+                    <h3 class="job-title">دبلوم علوم الحاسب الآلي</h3>
+                    <p class="company">معهد العالمية للحاسب الآلي - الرياض</p>
+                </div>
+                
+                <div class="education-item">
+                    <h3 class="job-title">دبلوم التربية العام</h3>
+                    <p class="company">جامعة تبوك - تبوك</p>
+                </div>
+            </div>
+
+            <div class="main-section">
+                <h2 class="main-title">المهارات المتخصصة</h2>
+                
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h4>المهارات الإدارية</h4>
+                        <ul>
+                            <li>القيادة الإدارية وإدارة الفرق</li>
+                            <li>التخطيط الاستراتيجي</li>
+                            <li>إعداد التقارير والمراسلات</li>
+                            <li>إدارة الوقت وتحديد الأولويات</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="skill-category">
+                        <h4>المهارات الشخصية</h4>
+                        <ul>
+                            <li>التواصل الفعال والعرض</li>
+                            <li>العمل تحت الضغط</li>
+                            <li>حل المشكلات والتفكير النقدي</li>
+                            <li>التكيف مع بيئات العمل المتغيرة</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="main-section">
+                <h2 class="main-title">الاهتمامات المهنية</h2>
+                <div class="interests">
+                    <span class="interest-tag">تطوير الأنظمة الإدارية</span>
+                    <span class="interest-tag">التدريب وتطوير الموارد البشرية</span>
+                    <span class="interest-tag">التقنيات الحديثة</span>
+                    <span class="interest-tag">القيادة النسائية</span>
+                    <span class="interest-tag">تمكين المرأة في العمل</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // تأثيرات التحريك عند التمرير
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // تطبيق التأثيرات على العناصر
+        document.querySelectorAll('.experience-item, .education-item, .skill-category').forEach(item => {
+            item.style.opacity = '0';
+            item.style.transform = 'translateY(20px)';
+            item.style.transition = 'all 0.6s ease';
+            observer.observe(item);
+        });
+
+        // تأثير الكتابة للهدف المهني
+        const objective = document.querySelector('.objective');
+        const text = objective.textContent;
+        objective.textContent = '';
+        
+        let i = 0;
+        function typeWriter() {
+            if (i < text.length) {
+                objective.textContent += text.charAt(i);
+                i++;
+                setTimeout(typeWriter, 20);
+            }
+        }
+        
+        // تشغيل تأثير الكتابة عند التمرير للقسم
+        const objectiveObserver = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    typeWriter();
+                    objectiveObserver.unobserve(entry.target);
+                }
+            });
+        });
+        
+        objectiveObserver.observe(objective);
+    </script>
+</body>
+</html>            font-weight: bold;
             margin-bottom: 5px;
             color: white;
         }
